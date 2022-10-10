@@ -42,6 +42,8 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    container: 
+      image: node:alpine3.15
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -49,6 +51,7 @@ jobs:
       - name: Project Contents
         run: |
           ls -liaR
+          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
