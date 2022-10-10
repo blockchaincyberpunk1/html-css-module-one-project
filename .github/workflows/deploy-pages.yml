@@ -59,7 +59,7 @@ jobs:
           # a protected branch must be used. This secret can have an arbitrary
           # name, as an example, you can use `SOME_RANDOM_TOKEN_STRING`.
           # Since this repository has no protected branches we will omit
-          # this part of the step.
+          # this part of the step. end
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Pages
